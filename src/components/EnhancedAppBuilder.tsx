@@ -207,7 +207,7 @@ Please review and approve the changes in the "Pending Changes" section.`;
           credits_consumed: mode === 'build' ? 1 : 0,
         })
         .eq('id', sessionId);
-    } catch (error) {
+    } catch (error: unknown) {
       console.error(error);
     } finally {
       setLoading(false);
